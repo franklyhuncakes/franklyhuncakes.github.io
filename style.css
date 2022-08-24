@@ -1,23 +1,112 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 body {
-    design: flex;
-    background-color: blanchedalmond;
+    background: -webkit-gradient(linear, left top, left bottom, from(#708090), to(#eee)) fixed;
 }
 @media only screen and (max-width: 980px), (min-width: 600) {
     body {
-        background-color: skyblue;
+        background: -webkit-gradient(linear, left top, left bottom, from(#708090), to(#eee)) fixed;
     }
 }
-.headerMade {
-    position: relative;
-    background-color: lightcyan;
-    color: black;
-    height: 12px;
-    width: 100%;
+.binder-header {
+    justify-content: space-between;
+    align-items: center;
 }
-header {
-    flex: 1;
-    font-size: 10px;
+.binder-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.binder-wrapper nav {
+    margin-left: auto;
+}
+.nav {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+}
+.nav a:hover {
+    color: steelblue; 
+}
+.aboutMe img[src="./assets/aaronMitchell01.PNG"] {
+    height: 80px;
+    width: 60px;
+    cursor: pointer;  
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    } 100% {
+        transform: translateX(0);
+    }
+}
+hr {
+    animation: 2s ease-out .1s 1 slideInFromLeft;
+    border-color: black;
 }
 h2 {
     color: black;
+}
+.screenSizes {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-radius: 25px;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.screenCard {
+    background-color: purple;
+    width: min-content;
+    border-radius: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.screenCard p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.screenCard:hover {
+    box-shadow: 5px 5px 5px lightgrey, -5px 5px 5px lightgrey;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    transform: rotateX(5deg);
+    cursor: grab;
+}
+.screenCard:active {
+    cursor: grabbing;
+    box-shadow: none;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    transform: rotateX(-5deg);
+}
+img[src="./assets/screenSizes01.png"] {
+    border-radius: 25px;
+    width: 325px;
+    height: 300px;
+}
+@keyframes wobbleCard {
+    50% {
+        transform: rotateZ(-3deg);
+    } 50% {
+        transform: rotateZ(3deg);
+    } 100% {
+        transform: rotateZ(-3deg);
+    } 50% {
+        transform: rotateZ(3deg);
+    } 25% {
+        transform: rotateZ(-3deg);
+    }
+}
+.screenCard {
+    animation: .33s ease-out 0s 1 wobbleCard;
 }
