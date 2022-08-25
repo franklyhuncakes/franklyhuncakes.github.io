@@ -21,6 +21,7 @@ body {
 .binder-wrapper {    
     display: flex;
     position: relative;
+    background-color: #708090;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
