@@ -17,6 +17,7 @@ body {
     top: 0px;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 .binder-wrapper {    
     display: flex;
@@ -25,9 +26,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
 }
-.binder-wrapper nav {
+.binder-wrapper .nav {
     margin-left: auto;
+}
+.binder-header .nav a::after {
+    content: "|";
+    border-left: none;
+}
+.binder-header .nav a:last-child::after {
+    display: none;
 }
 .nav {
     font-size: 20px;
@@ -89,7 +98,7 @@ h2 {
     padding-right: 15px;
 }
 .screenCard:hover {
-    box-shadow: 5px 5px 5px lightgrey, -5px 5px 5px lightgrey;
+    box-shadow: 10px 10px 5px lightgrey, -10px 10px 5px lightgrey;
     margin-top: -5px;
     margin-bottom: 5px;
     transform: rotateX(5deg);
@@ -129,8 +138,7 @@ img[src="./assets/screenSizes01.png"] {
     box-sizing: border-box;
     border-radius: 90px;
     height: 48px;
-    width: 48px;
-    
+    width: 48px;    
     float: bottom;
     z-index: 1;
 }
