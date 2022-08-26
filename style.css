@@ -60,6 +60,7 @@ body {
 hr {
     animation: 2s ease-out .1s 1 slideInFromLeft;
     border-color: black;
+    margin-top: 0px;
 }
 h2 {
     color: black;
