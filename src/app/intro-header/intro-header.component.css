@@ -1,0 +1,24 @@
+.header-wrapper {
+  background-color: lightgray;
+}
+
+.inner-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-header-wrap span {
+  padding-left: 0px;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+}
+
+.inner-header-wrap nav a {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+

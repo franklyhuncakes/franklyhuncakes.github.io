@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./intro-header.component.css']
 })
 export class IntroHeaderComponent {
-  title = "Hello Cranky";
+
 }
