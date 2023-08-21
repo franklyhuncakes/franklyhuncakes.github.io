@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'local-intro';
+  constructor(){
+
+  }
+  title = 'Title: local-intro';
+  message = 'Hello from app.component.'
 }
