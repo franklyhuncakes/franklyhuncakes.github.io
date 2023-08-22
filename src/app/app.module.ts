@@ -22,4 +22,6 @@ import { NgModule } from '@angular/core';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
